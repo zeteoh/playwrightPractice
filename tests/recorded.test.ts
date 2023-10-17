@@ -21,4 +21,16 @@ test('test', async({page}) => {
 
     // Click input:has-text("Login")
     await page.locator('input:has-text("Login")').click()
+
+    // Click test=Edit your accout information
+    await page.locator('text=Edit your account information').click()
+
+    // Click [placeholder="First Name"]
+    await page.locator('[placeholder="First Name"]').click()
+
+    // Fill [placeholder="First Name"]
+    await page.locator('[placeholder="First Name"]').fill("zlzlzltest")
+
+    //logout
+    await page.locator('span:has-text("Logout")').click()
 })
